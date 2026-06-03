@@ -7,10 +7,10 @@ import java.io.InputStreamReader;
 public class ATM  {
 	
 	// initial cash in the ATM
-	int cash = 100;
+	int cash = 1000;
 		
 	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5};
+	int[] value_of_bills = new int[] {500, 200, 100, 50, 23, 20, 10, 5}; // 23€ eingefügt
 
 	
 	/**
@@ -40,15 +40,10 @@ public class ATM  {
 			return;
 		}
 		
-		// check if value can be divided by 5
-		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
-			return;
-		}
-		
+		// Modulo 5 entfernt
 		
 		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0};
+		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0}; // Array vergrößert 
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -81,10 +76,10 @@ public class ATM  {
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0};
+			return new int[] {0,0,0,0,0,0,0}; // Stellen
 		
 		// return array for the different bill types
-		int[] r = new int[7];
+		int[] r = new int[8];
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.
