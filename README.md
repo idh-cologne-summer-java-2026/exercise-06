@@ -16,3 +16,16 @@ Ergänzen Sie dort ein Objekt dass Sie gerne einpacken würden. Machen Sie einen
 
 ## Aufgabe 2
 
+In den Aufgaben 2 und 3 geht es darum, dass Sie etwas Erfahrung im Umgang mit pull requests machen. 
+
+Legen Sie zunächst einen eigenen Branch an, den Sie z.B. nach Ihrem Benutzernamen benennen.
+
+In der Klasse `idh.java.ATM` finden Sie die ATM-Implementierung, die wir in der Sitzung verwendet haben. Machen Sie eine kleine Änderung. Es ist letztlich egal welche, es sollte aber hinterher immer noch ausführbarer Code sein. Z.B. könnten Sie die Fehlermeldungen umformulieren, oder einen neuen Geldscheintyp erfinden (wäre es nicht praktisch, wenn es 23€-Scheine gäbe?).
+
+Committen und pushen Sie wie üblich.
+
+Gehen Sie dann auf [die GitHub-Seite](https://github.com/idh-cologne-summer-java-2026/exercise-06/pulls) und erstellen einen pull request. Dabei müssen Sie auswählen, welche Branches Sie mergen möchten. Ihr eigener, vorher neu erstellter Branch ist dabei der "compare"-Branch. Der "base"-Branch ist der, in den Sie ihre Änderungen übernommen bekommen möchten. Wählen Sie als "base"-Branch einen beliebigen anderen aus (aber nicht den main-Branch).
+
+## Aufgabe 3
+
+Alle gestellten pull requests finden Sie [hier](https://github.com/idh-cologne-summer-java-2026/exercise-06/pulls). Suchen Sie sich einen aus, und arbeiten Sie ihn ab. Er muss keinen ihrer eigenen Branches betreffen. Versuchen Sie ihn zu mergen, stellen Sie ggf. Rückfragen an die/den Einreicher:in des pull requests. Wenn Sie für Ihren pull request aus Aufgabe 2 Rückfragen bekommen, reagieren Sie in geeigneter Weise.
