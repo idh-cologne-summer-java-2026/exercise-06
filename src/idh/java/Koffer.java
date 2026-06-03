@@ -2,6 +2,6 @@ package idh.java;
 
 public class Koffer {
 	public static void main(String[] args) {
-		System.out.println("Ich packe in meinen Koffer ein Modulhandbuch.");
+		System.out.println("Ich packe in meinen Koffer ein Modulhandbuch und Fleisch.");
 	}
 }
