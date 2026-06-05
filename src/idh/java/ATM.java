@@ -1,4 +1,3 @@
-
 package idh.java;
 
 import java.io.BufferedReader;
@@ -9,8 +8,9 @@ public class ATM  {
 	// initial cash in the ATM
 	int cash = 100;
 		
-	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5};
+	// ÄNDERUNG 1: Hier ist jetzt der 67€-Schein
+	// Wichtig: Er muss zwischen der 100 und der 50 stehen, damit die Reihenfolge stimmt.
+	int[] value_of_bills = new int[] {500, 200, 100, 67, 50, 20, 10, 5};
 
 	
 	/**
@@ -23,7 +23,7 @@ public class ATM  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			try {
-				System.out.print("Enter the amount to withdraw: ");
+				System.out.print("Wieviel Kohle möchten Sie abheben?");
 				int amount = Integer.parseInt(br.readLine());
 				cashout(amount);
 			} catch (Exception e) {
@@ -36,19 +36,19 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left, broke boy");
+			System.out.println("Du bist pleite!");
 			return;
 		}
 		
 		// check if value can be divided by 5
 		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+			System.out.println("This amount cannot be expressed in bills.");
 			return;
 		}
 		
 		
-		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0};
+		// ÄNDERUNG 2: Wir haben 8 Scheine, also brauchen wir hier 8 Nullen.
+		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0};
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -80,11 +80,13 @@ public class ATM  {
 	 */
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
+		// ÄNDERUNG 3: Auch hier müssen 8 Nullen als Fehler-Rückgabe stehen.
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0};
+			return new int[] {0,0,0,0,0,0,0,0};
 		
 		// return array for the different bill types
-		int[] r = new int[7];
+		// ÄNDERUNG 4: Die Größe des neuen Arrays muss auf 8 gesetzt werden.
+		int[] r = new int[8];
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.
