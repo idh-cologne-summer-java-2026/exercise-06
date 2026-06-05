@@ -17,6 +17,6 @@ public class Koffer {
 						+ "     | |      | |\n"
 						+ "     | |      | |\n"
 						+ "    (___)    (___)\n"
-						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe");
+						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe, Nils:)");
 			}
 		}
