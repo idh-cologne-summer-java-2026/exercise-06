@@ -17,6 +17,6 @@ public class Koffer {
 						+ "     | |      | |\n"
 						+ "     | |      | |\n"
 						+ "    (___)    (___)\n"
-						+ "die LP \" Made in Japan \" ", "Alpakageschirr");
+						+ "die LP \" Made in Japan \" , Alpakageschirr");
 			}
 		}
