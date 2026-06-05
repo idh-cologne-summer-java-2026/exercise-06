@@ -24,6 +24,7 @@ public class ATM  {
 		while (true) {
 			try {
 				System.out.print("Enter the amount to withdraw: ");
+				System.out.println("/ Geben Sie den abzuhebenden Betrag ein: ");
 				int amount = Integer.parseInt(br.readLine());
 				cashout(amount);
 			} catch (Exception e) {
@@ -36,11 +37,18 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left.");
+			System.out.print("Sorry, not enough cash left.");
+			System.out.println(" / Es ist nicht genug Bargeld vorhanden.");
 			return;
 		}
 		
-		// Modulo 5 entfernt
+		// check if value can be divided by 5
+		if (amount % 5 > 0) {
+			System.out.print("Sorry, this amount cannot be expressed in bills.");
+			System.out.println(" / Dieser Betrag kann nicht in Banknoten ausgegeben werden.");
+			return;
+		}
+
 		
 		// withdraw
 		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0}; // Array vergrößert 
