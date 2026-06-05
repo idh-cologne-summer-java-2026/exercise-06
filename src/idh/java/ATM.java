@@ -36,7 +36,7 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left.");
+			System.out.println("Die Bank ist pleite, bitte geraten Sie in Panik!");
 			return;
 		}
 		
