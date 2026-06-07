@@ -7,36 +7,40 @@ import java.io.InputStreamReader;
 public class ATM  {
 	
 	// initial cash in the ATM
-	int cash = 100;
+	int cash = 10000;
 		
 	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5};
+	int[] value_of_bills = new int[] {500, 200, 100, 50, 25, 20, 10, 5};
 
 	
 	/**
 	 * Main command loop of the ATM Asks the user to enter a number, and passes this
 	 * number to the function cashout(...) which actually does the calculation and
 	 * produces money. If the user enters anything else than an integer number, the
-	 * loop breaks and the program exists
+	 * loop breaks and the program exits. The same applies, if the ATM runs out of cash. 
 	 */
 	public void run() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
-			try {
-				System.out.print("Enter the amount to withdraw: ");
-				int amount = Integer.parseInt(br.readLine());
-				cashout(amount);
-			} catch (Exception e) {
-				e.printStackTrace();
-				break;
-			}
+			while (cash > 0) {
+				try {
+					System.out.print("Enter the amount to withdraw: ");
+					int amount = Integer.parseInt(br.readLine());
+					cashout(amount);
+				} catch (Exception e) {
+					e.printStackTrace();
+					break;
+				}
+		} System.out.println("ATM out of cash. Please try again later!");
+			break;
 		}
-	}
+		} 
+	
 
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left.");
+			System.out.println("Sorry, not enough cash left. Maximum amount to withdraw: " + cash);
 			return;
 		}
 		
@@ -48,7 +52,7 @@ public class ATM  {
 		
 		
 		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0};
+		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0};
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -66,8 +70,7 @@ public class ATM  {
 		b.append(" and ").append(bills[i]).append(" ").append(value_of_bills[i]).append("s.");
 		System.out.println(b.toString());
 
-		cash += amount;
-		
+		cash -= amount;
 	};
 
 	/**
@@ -81,10 +84,10 @@ public class ATM  {
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0};
+			return new int[] {0,0,0,0,0,0,0,0};
 		
 		// return array for the different bill types
-		int[] r = new int[7];
+		int[] r = new int[8];
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.
