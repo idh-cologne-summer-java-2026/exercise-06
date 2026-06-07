@@ -19,7 +19,9 @@ public class Koffer {
 						+ "    (___)    (___)\n"
 
 						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe,Nils:) "
-						+ "das Bundesverfassungsgericht (Man weiß ja nie)");
+						+ "das Bundesverfassungsgericht (Man weiß ja nie)"
+						+ "ein Basketball" 
+						+ "einen Schokokeks");
 
 			}
 		}
