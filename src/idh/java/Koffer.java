@@ -25,7 +25,8 @@ public class Koffer {
 						+ "Nils:)\n"
 						+ "das Bundesverfassungsgericht (Man weiß ja nie)\n"
 						+ "ein Basketball\n" 
-						+ "einen Schokokeks\n");
+						+ "einen Schokokeks\n"
+						+ "einen Nintendo 3DS mit Pokemon Mond\n");
 
 			}
 		}
