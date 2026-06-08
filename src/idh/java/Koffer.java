@@ -17,7 +17,20 @@ public class Koffer {
 						+ "     | |      | |\n"
 						+ "     | |      | |\n"
 						+ "    (___)    (___)\n"
-						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe,"
-						+ "ein gutes Buch");
+						+ "\n"
+						+ "maybe a Leo, but sure no Lion\n"
+						+ "die LP \"Made in Japan\"\n" 
+						+ "Alpakageschirr\n" 
+						+ "Luhmanns Zettelkasten und einen Apple IIe\n" 
+						+ "Nils:)\n"
+						+ "das Bundesverfassungsgericht (Man weiß ja nie)\n"
+						+ "ein Basketball\n" 
+						+ "einen Schokokeks\n"
+						+ "eine Katze mit Hut\n"
+						+ "einen Nintendo 3DS mit Pokemon Mond\n"
+						+ "einen Tiger mit 11 Streifen\n"
+						+ "meinen halben Kleiderschrank\n"
+						+ " eine Zahnbürste und Zahnpasta\n");
+
 			}
 		}
