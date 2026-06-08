@@ -40,7 +40,7 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left. Maximum amount to withdraw: " + cash);
+			System.out.println("Sorry, but your account balance is giving unemployed...");
 			return;
 		}
 		
