@@ -27,7 +27,8 @@ public class Koffer {
 						+ "ein Basketball\n" 
 						+ "einen Schokokeks\n"
 						+ "eine Katze mit Hut\n"
-						+ "einen Nintendo 3DS mit Pokemon Mond\n");
+						+ "einen Nintendo 3DS mit Pokemon Mond\n"
+						+ "einen Tiger mit 11 Streifen\n");
 
 			}
 		}
