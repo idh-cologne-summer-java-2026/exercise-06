@@ -36,13 +36,13 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left for you.");
+			System.out.println("Sorry, not enough cash left for you!");
 			return;
 		}
 		
 		// check if value can be divided by 5
 		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+			System.out.println("Sorry, this amount cannot be expressed in bills. Try again!");
 			return;
 		}
 		
