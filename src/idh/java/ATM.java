@@ -20,6 +20,7 @@ public class ATM  {
 	 * loop breaks and the program exits. The same applies, if the ATM runs out of cash. 
 	 */
 	public void run() {
+		System.out.println("Good Morning!");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			while (cash > 0) {
