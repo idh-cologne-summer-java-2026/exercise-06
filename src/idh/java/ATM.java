@@ -9,29 +9,33 @@ public class ATM  {
 	// initial cash in the ATM
 	int cash = 10000;
 		
-	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {501, 500, 200, 100, 50, 20, 10, 5}; // new 501 bill
-
+	// Which banknotes do we have? 
+  // atm now offers denominations of 23€ and 25€ (i.e. both of the denominations suggested) 
+	int[] value_of_bills = new int[] {501, 500, 200, 100, 50, 25, 23, 20, 10, 5};
 	
 	/**
 	 * Main command loop of the ATM Asks the user to enter a number, and passes this
 	 * number to the function cashout(...) which actually does the calculation and
 	 * produces money. If the user enters anything else than an integer number, the
-	 * loop breaks and the program exists
+	 * loop breaks and the program exits. The same applies, if the ATM runs out of cash. 
 	 */
 	public void run() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
-			try {
-				System.out.print("Enter the amount to withdraw: ");
-				int amount = Integer.parseInt(br.readLine());
-				cashout(amount);
-			} catch (Exception e) {
-				e.printStackTrace();
-				break;
-			}
+			while (cash > 0) {
+				try {
+					System.out.print("Enter the amount to withdraw: ");
+					int amount = Integer.parseInt(br.readLine());
+					cashout(amount);
+				} catch (Exception e) {
+					e.printStackTrace();
+					break;
+				}
+		} System.out.println("ATM out of cash. Please try again later!");
+			break;
 		}
-	}
+		} 
+	
 
 	public void cashout(int amount) {
 		// check for cash in the ATM
@@ -41,15 +45,18 @@ public class ATM  {
 		}
 		
 		// check if value can be divided by 5
-		if (amount % 5 != 0 && amount % 501 != 0) { //also check for 501 bill 
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+		if (amount % 5 != 0 && amount % 501 != 0 && amount != 0) { //also check for 501 bill // added:  or if it equals 23 
+			System.out.println("Sorry, but your account balance is giving unemployed...");
 			return;
-			
+		}
+		
+
 		}
 		
 		
 		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0}; // new bill slot
+
+		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // additional index position added, +1
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -67,8 +74,7 @@ public class ATM  {
 		b.append(" and ").append(bills[i]).append(" ").append(value_of_bills[i]).append("s.");
 		System.out.println(b.toString());
 
-		cash -= amount; //corrected mistake
-		
+		cash -= amount;
 	};
 
 	/**
@@ -82,10 +88,10 @@ public class ATM  {
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0,0}; // added bill slot
+			return new int[] {0,0,0,0,0,0,0,0,0,0}; // additional index position added, +1
 		
 		// return array for the different bill types
-		int[] r = new int[8]; // new bill slot
+		int[] r = new int[10]; // additional index position added, +1
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.
