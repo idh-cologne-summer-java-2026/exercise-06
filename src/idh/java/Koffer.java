@@ -33,7 +33,8 @@ public class Koffer {
 						+ " eine Zahnbürste und Zahnpasta\n"
 						+ "ein zweites Alpaka damit das andere nicht einsam ist\n"
 			            + "ein drittes Alpaka\n"
-						+ "Fortnite\n");
+						+ "Fortnite\n"
+			            + "einen weiteren Koffer\n");
 
 			}
 		}
