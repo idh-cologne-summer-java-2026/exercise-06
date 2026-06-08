@@ -11,7 +11,7 @@ public class ATM  {
 		
 	// Which banknotes do we have? 
   // atm now offers denominations of 23€ and 25€ (i.e. both of the denominations suggested) 
-	int[] value_of_bills = new int[] {500, 200, 100, 50, 25, 23, 20, 10, 5};
+	int[] value_of_bills = new int[] {501, 500, 200, 100, 50, 25, 23, 20, 10, 5};
 	
 	/**
 	 * Main command loop of the ATM Asks the user to enter a number, and passes this
@@ -40,20 +40,23 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
+			System.out.println("Sorry, not enough cash left for you.");
+			return;
+		}
+		
+		// check if value can be divided by 5
+		if (amount % 5 != 0 && amount % 501 != 0 && amount != 0) { //also check for 501 bill // added:  or if it equals 23 
 			System.out.println("Sorry, but your account balance is giving unemployed...");
 			return;
 		}
 		
-		// check if value can be divided by 5 
-    // added:  or if it equals 23 
-		if (amount % 5 > 0 && amount != 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
-			return;
+
 		}
 		
 		
 		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0}; // additional index position added
+
+		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // additional index position added, +1
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -85,10 +88,10 @@ public class ATM  {
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0,0,0}; // additional index position added
+			return new int[] {0,0,0,0,0,0,0,0,0,0}; // additional index position added, +1
 		
 		// return array for the different bill types
-		int[] r = new int[9]; // additional index position added
+		int[] r = new int[10]; // additional index position added, +1
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.
