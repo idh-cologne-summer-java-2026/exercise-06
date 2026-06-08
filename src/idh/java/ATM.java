@@ -20,6 +20,7 @@ public class ATM  {
 	 * loop breaks and the program exists
 	 */
 	public void run() {
+		System.out.println("Good Morning!");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			try {
