@@ -28,7 +28,8 @@ public class Koffer {
 						+ "einen Schokokeks\n"
 						+ "eine Katze mit Hut\n"
 						+ "einen Nintendo 3DS mit Pokemon Mond\n"
-						+ "einen Tiger mit 11 Streifen\n");
+						+ "einen Tiger mit 11 Streifen\n"
+						+ "meinen halben Kleiderschrank");
 
 			}
 		}
