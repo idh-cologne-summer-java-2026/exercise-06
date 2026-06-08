@@ -31,7 +31,8 @@ public class Koffer {
 						+ "einen Tiger mit 11 Streifen\n"
 						+ "meinen halben Kleiderschrank\n"
 						+ " eine Zahnbürste und Zahnpasta\n"
-						+ "ein zweites Alpaka damit das andere nicht einsam ist\n");
+						+ "ein zweites Alpaka damit das andere nicht einsam ist\n"
+			            + "ein drittes Alpaka\n");
 
 			}
 		}
