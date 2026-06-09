@@ -2,7 +2,7 @@ package idh.java;
 
 public class Koffer {
 	public static void main(String[] args) {
-			System.out.println("Ich packe in meinen Koffer ein Modulhandbuch, Fleisch, ein Alpaka:\n"
+			System.out.println("Ich packe in meinen Koffer ein Modulhandbuch, veganes Fleisch, ein Alpaka:\n"
 						+ "    _    _\n"
 						+ "   (o\\_/_o)\n"
 						+ "   ( . . )\n"
@@ -17,6 +17,10 @@ public class Koffer {
 						+ "     | |      | |\n"
 						+ "     | |      | |\n"
 						+ "    (___)    (___)\n"
-						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe");
+
+						+ "die LP \" Made in Japan \" , Alpakageschirr, Luhmanns Zettelkasten und einen Apple IIe,Nils:) "
+						+ "das Bundesverfassungsgericht (Man weiß ja nie)"
+						+ "ein Basketball");
+
 			}
 		}
