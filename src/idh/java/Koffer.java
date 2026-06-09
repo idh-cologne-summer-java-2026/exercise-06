@@ -40,7 +40,8 @@ public class Koffer {
 						+ "ein viertes Alpaka\n" 
 						+ "ein Buch\n"
 						+ "Shampoo\n"
-						+ "und noch einen Koffer\n");
+						+ "und noch einen Koffer\n"
+						+"guns n roses aber die menschen\n");
 
 			}
 		}
