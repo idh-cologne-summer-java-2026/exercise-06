@@ -22,7 +22,7 @@ public class Koffer {
 						+ "die LP \"Made in Japan\"\n" 
 						+ "Alpakageschirr\n" 
 						+ "Luhmanns Zettelkasten und einen Apple IIe\n" 
-						+ "Nils:)\n"
+						+ "Nils:\n" //runde Klammer zu entfernt
 						+ "das Bundesverfassungsgericht (Man weiß ja nie)\n"
 						+ "ein Basketball\n" 
 						+ "einen Schokokeks\n"
