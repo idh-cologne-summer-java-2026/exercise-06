@@ -36,7 +36,9 @@ public class Koffer {
 						+ "Fortnite\n"
 			            + "Kpop-Album"
 			            + "einen weiteren Koffer\n"
-						+ "Wackersteine\n");
+						+ "Wackersteine\n"
+						+ "ein viertes Alpaka\n" 
+						+ "lalala\n");
 
 			}
 		}
