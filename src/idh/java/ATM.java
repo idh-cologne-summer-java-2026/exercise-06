@@ -10,7 +10,7 @@ public class ATM  {
 	int cash = 100;
 		
 	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5, 2, 1};
+	int[] value_of_bills = new int[] {500, 267, 169, 57, 24, 10, 5, 2, 1};
 	//User can now withdraw 2 and 1 euro coins as well. yay!
 	
 	/**
@@ -36,7 +36,7 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left.");
+			System.out.println("Sorry, not enough cash left for you.");
 			return;
 		}
 		
