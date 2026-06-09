@@ -10,8 +10,8 @@ public class ATM  {
 	int cash = 100;
 		
 	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 267, 169, 57, 24, 10, 5};
-
+	int[] value_of_bills = new int[] {500, 267, 169, 57, 24, 10, 5, 2, 1};
+	//User can now withdraw 2 and 1 euro coins as well. yay!
 	
 	/**
 	 * Main command loop of the ATM Asks the user to enter a number, and passes this
@@ -42,7 +42,7 @@ public class ATM  {
 		
 		// check if value can be divided by 5
 		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+			System.out.println("Sorry, this amount cannot be expressed in bills or coins.");
 			return;
 		}
 		
