@@ -39,7 +39,7 @@ public class Koffer {
 						+ "Wackersteine\n"
 						+ "ein viertes Alpaka\n" 
 						+ "ein Buch\n"
-						+ "noch einen Koffer\n");
+						+ "und noch einen Koffer\n");
 
 			}
 		}
