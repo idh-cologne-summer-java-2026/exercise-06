@@ -30,12 +30,13 @@ public class Koffer {
 						+ "einen Nintendo 3DS mit Pokemon Mond\n"
 						+ "einen Tiger mit 11 Streifen\n"
 						+ "meinen halben Kleiderschrank\n"
-						+ " eine Zahnbürste und Zahnpasta\n"
+						+ "eine Zahnbürste und Zahnpasta\n"
 						+ "ein zweites Alpaka damit das andere nicht einsam ist\n"
 			            + "ein drittes Alpaka\n"
 						+ "Fortnite\n"
 			            + "Kpop-Album"
-			            + "einen weiteren Koffer\n");
+			            + "einen weiteren Koffer\n"
+						+ "Wackersteine\n");
 
 			}
 		}
