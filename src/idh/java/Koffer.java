@@ -37,7 +37,8 @@ public class Koffer {
 			            + "Kpop-Album"
 			            + "einen weiteren Koffer\n"
 						+ "Wackersteine\n"
-						+ "ein viertes Alpaka\n" );
+						+ "ein viertes Alpaka\n" 
+						+ "ein Buch\n");
 
 			}
 		}
