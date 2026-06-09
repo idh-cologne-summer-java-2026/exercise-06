@@ -23,7 +23,7 @@ public class ATM  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			try {
-				System.out.print("Enter the amount to withdraw: ");
+				System.out.print("Enter the amount of Noodels to withdraw: ");
 				int amount = Integer.parseInt(br.readLine());
 				cashout(amount);
 			} catch (Exception e) {
@@ -36,7 +36,7 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left for you.");
+			System.out.println("Sorry, not enough Noodels left for you.");
 			return;
 		}
 		
