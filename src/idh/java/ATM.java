@@ -9,7 +9,10 @@ public class ATM  {
 	// initial cash in the ATM
 	int cash = 100;
 		
-	// Which banknotes do we have?
+	/* ATM might explode if messed with too much because 
+	corporate decided not to invest too much money */
+	int integrity = 5;
+	// Which bank notes do we have?
 	int[] value_of_bills = new int[] {500, 200, 100, 50, 20, 10, 5};
 
 	
@@ -23,6 +26,11 @@ public class ATM  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			try {
+				if(integrity == 0) {
+					System.out.println("Oh no! The ATM exploded! Look what you've done now, you fool.");
+					break;
+				}
+				integrity--;
 				System.out.print("Enter the amount to withdraw: ");
 				int amount = Integer.parseInt(br.readLine());
 				cashout(amount);
@@ -36,13 +44,13 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left for you. Please enter a valid amount.");
+			System.out.println("Sorry, you're broke. Maybe try getting more money?");
 			return;
 		}
 		
 		// check if value can be divided by 5
 		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+			System.out.println("Sorry, numbers not divisible by 5 are not real to me. Try again :)");
 			return;
 		}
 		
