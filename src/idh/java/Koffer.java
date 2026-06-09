@@ -41,7 +41,7 @@ public class Koffer {
 						+ "ein Buch\n"
 						+ "Shampoo\n"
 						+ "und noch einen Koffer\n"
-						+"guns n roses aber die menschen\n");
+						+ "guns n roses aber die menschen\n");
 
 			}
 		}
