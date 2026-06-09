@@ -10,7 +10,11 @@ public class ATM  {
 	int cash = 100;
 		
 	// Which banknotes do we have?
-	int[] value_of_bills = new int[] {500, 200, 100, 75,50, 25,20, 10, 5};
+	int[] value_of_bills = new int[] {500, 200, 100, 75, 50, 25, 20, 10, 5};
+	
+  /* ATM might explode if messed with too much because 
+	corporate decided not to invest too much money */
+	int integrity = 5;
 
 	
 	/**
@@ -23,6 +27,11 @@ public class ATM  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			try {
+				if(integrity == 0) {
+					System.out.println("Oh no! The ATM exploded! Look what you've done now, you fool.");
+					break;
+				}
+				integrity--;
 				System.out.print("Enter the amount to withdraw: ");
 				int amount = Integer.parseInt(br.readLine());
 				cashout(amount);
@@ -36,19 +45,19 @@ public class ATM  {
 	public void cashout(int amount) {
 		// check for cash in the ATM
 		if (amount > cash) {
-			System.out.println("Sorry, not enough cash left for you.");
+			System.out.println("Sorry, you're broke. Maybe try getting more money?");
 			return;
 		}
 		
 		// check if value can be divided by 5
 		if (amount % 5 > 0) {
-			System.out.println("Sorry, this amount cannot be expressed in bills.");
+			System.out.println("Sorry, numbers not divisible by 5 are not real to me. Try again :)");
 			return;
 		}
 		
 		
 		// withdraw
-		int[] bills = new int[] {0, 0, 0, 0, 0, 0, 0};
+		int[] bills = new int[value_of_bills.length];
 		try {
 			bills = convertToBills(amount);
 		} catch (IllegalInputException e) {
@@ -81,10 +90,10 @@ public class ATM  {
 	protected int[] convertToBills(int amount) throws IllegalInputException {
 		// illegal amount
 		if (amount < 0)
-			return new int[] {0,0,0,0,0,0,0};
+			return new int[value_of_bills.length];
 		
 		// return array for the different bill types
-		int[] r = new int[7];
+		int[] r = new int[value_of_bills.length];
 		
 		// iterate over the possible pill types
 		// order is important here! Need to go from largest to smallest.

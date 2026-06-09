@@ -22,7 +22,7 @@ public class Koffer {
 						+ "die LP \"Made in Japan\"\n" 
 						+ "Alpakageschirr\n" 
 						+ "Luhmanns Zettelkasten und einen Apple IIe\n" 
-						+ "Nils:)\n"
+						+ "Nils:\n" //runde Klammer zu entfernt
 						+ "das Bundesverfassungsgericht (Man weiß ja nie)\n"
 						+ "ein Basketball\n" 
 						+ "einen Schokokeks\n"
@@ -30,12 +30,13 @@ public class Koffer {
 						+ "einen Nintendo 3DS mit Pokemon Mond\n"
 						+ "einen Tiger mit 11 Streifen\n"
 						+ "meinen halben Kleiderschrank\n"
-						+ " eine Zahnbürste und Zahnpasta\n"
+						+ "eine Zahnbürste und Zahnpasta\n"
 						+ "ein zweites Alpaka damit das andere nicht einsam ist\n"
 			            + "ein drittes Alpaka\n"
 						+ "Fortnite\n"
 			            + "Kpop-Album"
-			            + "einen weiteren Koffer\n");
+			            + "einen weiteren Koffer\n"
+						+ "Wackersteine\n");
 
 			}
 		}
